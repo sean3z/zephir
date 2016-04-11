@@ -634,10 +634,6 @@ class CompilerFile
             }
         }
 
-        if (!$namespace) {
-            throw new CompilerException("A namespace is required", $topStatement);
-        }
-
         /* Set namespace and flag as global, if before namespace declaration */
         foreach ($this->_functionDefinitions as $funcDef) {
             if ($funcDef->getNamespace() == null) {
